@@ -1,0 +1,292 @@
+@import "fonts.css";
+
+/* root start */
+:root {
+  --poppins700: "Poppins-Bold";
+  --roboto700: "Roboto-Bold";
+  --black: #000000;
+  --gray: #999999;
+  --darkgray: #6d6d6d;
+  --textgray: #7e7c7c;
+  --white: #ededed;
+  --bacgraund: #f6f6f6;
+  --pink: #ffe8e8;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol {
+  margin: 0;
+}
+ul {
+  list-style: none;
+  margin: 0;
+}
+a {
+  text-decoration: none;
+}
+
+/* root end */
+/* **************** */
+
+header {
+  position: relative;
+  width: 100%;
+  margin-bottom: 60px;
+}
+.header-nav {
+  position: fixed;
+  width: 100%;
+  /* background-color: #000000; */
+  height: 80px;
+  z-index: 555;
+}
+
+.header-nav-links {
+  padding-top: 35px;
+  margin-left: 15%;
+
+  display: flex;
+}
+
+.header-nav-links li {
+  margin-right: 40px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 19px;
+  text-align: right;
+  letter-spacing: 6.33143px;
+  text-transform: capitalize;
+  color: #000000;
+}
+
+.header-banner-wrapper {
+  height: 100vh;
+  background-color: #f6f6f6;
+}
+
+.background-div-img {
+  width: 100%;
+  height: 100%;
+  background-image: url("../img/Picture.png");
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+  background-position: 100% 100%;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.hidden-menu-title {
+  display: none;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold !important;
+  font-size: 20px;
+  line-height: 23px;
+  text-align: center;
+  letter-spacing: 1px;
+  margin-bottom: 30px !important;
+  color: #000000;
+}
+
+.header-title {
+  margin-left: 15%;
+  font-family: Poppins, sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 100px;
+  line-height: 120px;
+  color: #999999;
+}
+
+.upload-resume-btn {
+  position: absolute;
+  bottom: -50px;
+  left: 15%;
+  width: 320px;
+  height: 100px;
+  background: #ffe8e8;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 28px;
+  letter-spacing: 8.29714px;
+  color: #000000;
+}
+
+/* --------------navbar responsive-------------------- */
+.hamburger-btn {
+  width: 45px;
+  height: 45px;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  left: 25px;
+  top: 10px;
+  font-size: 22px;
+  color: black;
+  cursor: pointer;
+  z-index: 1111111;
+}
+
+.fa-times:before {
+  display: none;
+}
+
+nav.navbar-responsive .header-nav-links {
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: white;
+}
+
+nav.navbar-responsive .header-nav-links li {
+  margin: 0;
+  padding: 0;
+}
+
+nav.navbar-responsive .hamburger-btn {
+  display: block;
+  left: unset;
+  top: 20px;
+  right: 10px;
+}
+
+nav.navbar-responsive .fa-times:before {
+  display: block;
+}
+
+nav.navbar-responsive .fa-bars:before {
+  display: none;
+}
+
+@media (max-width: 1199.98px) {
+  .header-title {
+    margin-top: 210px;
+    margin-left: 7%;
+  }
+  .upload-resume-btn {
+    left: 7%;
+  }
+}
+
+/* header nav  */
+
+@media (max-width: 991.98px) {
+  .header-nav-links {
+    display: none;
+  }
+  .hamburger-btn {
+    display: flex;
+  }
+
+  nav.navbar-responsive .fa-times:before {
+    display: block;
+  }
+  .fa-bars:before {
+    display: block;
+  }
+  nav.navbar-responsive .fa-bars:before {
+    display: none;
+  }
+  nav.navbar-responsive .header-nav-links {
+    display: flex;
+  }
+
+  nav.navbar-responsive .header-nav-links li {
+    margin-bottom: 15px;
+    font-size: 24px;
+  }
+
+  nav.navbar-responsive .hidden-menu-title {
+    display: inline;
+  }
+
+  /* ------------ end of navbar responsive -----------*/
+
+  .header-title {
+    margin-top: 210px;
+    margin-left: 7%;
+  }
+  .upload-resume-btn {
+    left: 7%;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .header-banner-wrapper {
+    height: 60vh;
+  }
+
+  .upload-resume-btn {
+    left: 5%;
+  }
+  .header-title {
+    margin-top: 65px;
+    margin-left: 5%;
+    font-size: 75px;
+    line-height: 85px;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .header-banner-wrapper {
+    height: 65vh;
+    background-color: #fff;
+  }
+  .background-div-img {
+    height: 95%;
+  }
+
+  .header-title {
+    margin-top: 148px;
+    font-size: 50px;
+    line-height: 60px;
+  }
+
+  .upload-resume-btn {
+    bottom: -40px;
+    left: 5%;
+    font-size: 20px;
+    line-height: 25px;
+    width: 240px;
+    height: 70px;
+  }
+}
+
+@media (max-width: 375px) {
+  .header-title {
+    margin-top: 100px;
+    font-size: 50px;
+    line-height: 49px;
+  }
+
+  .upload-resume-btn {
+    left: 13%;
+  }
+
+  .background-div-img {
+    height: 80%;
+  }
+}
